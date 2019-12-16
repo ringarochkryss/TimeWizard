@@ -1,11 +1,11 @@
-    {% extends 'base.html' %}
-    {% block content %}
+{% extends 'base.html' %}
+{% block content %}
     <!--Show all questions in the database:-->
-        {% for question in questions %}
-            {{question.question}}
-            {{question.category_name}}
-            {{question.answer}}
-            {{question.is_answered}}
-            {{question.due_date}}
-        {% endfor %}
-    {% endblock %}
+    {% for question in questions %}
+        {{question.question}}
+        {{question.category_name}}
+        {{question.answer}}
+        {{question.is_answered}}
+        {{question.due_date}}
+    {% endfor %}
+{% endblock %}
