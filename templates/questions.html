@@ -1,0 +1,16 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+    <!--Show all questions in the database:-->
+        {% for question in questions %}
+            {{question.question}}
+            {{question.category_name}}
+            {{question.answer}}
+            {{question.is_answered}}
+            {{question.due_date}}
+        {% enfor %}
+    </body>
+    
+</html>
