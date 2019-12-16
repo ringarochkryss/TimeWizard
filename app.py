@@ -13,7 +13,7 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/get_questions')
 def get_questions():
-    return render_template("questions.html", questions=mongo.db.questions.find())
+    return render_template("base.html", questions=mongo.db.questions.find())
 
 
 if __name__ == '__main__':

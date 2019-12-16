@@ -1,8 +1,5 @@
-<html>
-    <head>
-        
-    </head>
-    <body>
+    {% extends 'base.html' %}
+    {% block content %}
     <!--Show all questions in the database:-->
         {% for question in questions %}
             {{question.question}}
@@ -10,7 +7,5 @@
             {{question.answer}}
             {{question.is_answered}}
             {{question.due_date}}
-        {% enfor %}
-    </body>
-    
-</html>
+        {% endfor %}
+    {% endblock %}
