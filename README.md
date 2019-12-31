@@ -89,12 +89,27 @@ heroku login
 
 Then commit to Heroku:
 ```bash
-Git add .
-Git commit -m "header" -m "subject"
-Git push heroku master
+git remote -v
+git add .
+git commit -m "header" -m "subject"
+git push -u heroku master
 ```
 
-To make it work it's important to make a proc-file: 
+Deployment to Github is performed by:
+1. Creating a new repository at Github
+2. Login with the terminal in C9:
+```bash
+git remote add origin https://github.com/ringarochkryss/timewizard.git
+```
+
+Then push the same data to Github as was just sent to Heroku:
+```bash
+git push -u origin master
+```
+
+Also in Heroku it is possible to connect Heroku with Github for syncronization.
+
+To make the app work at Heroku it's important to make a proc-file: 
 In the terminal write: 
 
 ```bash

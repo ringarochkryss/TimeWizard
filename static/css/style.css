@@ -1,0 +1,27 @@
+
+.datetext{
+    font-size: 11px;
+}
+h1 {
+  font-size: 65px;
+  background: -webkit-linear-gradient(#1976d2, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+  font-size: 40px;
+  }
+  
+  .chip{
+    font-size: 5px;
+  }
+}
+
+.switch label input[type=checkbox]:checked + .lever:after {
+ 
+  background-color: #1976d2;
+ 
+}

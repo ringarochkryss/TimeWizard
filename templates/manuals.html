@@ -1,0 +1,132 @@
+{% extends 'base.html' %} {% block content %}
+
+
+
+<!--..All questions and answers in accordeon...............  blue-grey darken-4.............................................-->
+<div class="row">
+  <div class="col s12">
+    <h3>MANUALS</h3>
+
+    {% for category in categories %}
+    <!--..About each card............................................................-->
+
+    <div class="col s12 m4 hide-on-small-only">
+      <div class="card blue-grey darken-4 center-align">
+
+        <div class="card-content white-text">
+          <span class="card-title">{{category.category_name}}</span>
+        </div>
+
+        <div class="card-action">
+          <div class="col s4"><a><i class="material-icons">laptop</i></a></div>
+          <div class="col s4"><a><i class="material-icons">tablet_android</i></a></div>
+          <div class="col s4"><a><i class="material-icons">schedule</i></a></div>
+          </br>
+        </div>
+
+      </div>
+    </div>
+
+    {% endfor %}
+
+    <!--..PDF Card 1............................................................-->
+    <div class="col s12 m4">
+      <div class="card blue-grey darken-4 center-align">
+        <span class="hide-on-med-and-up card-title white-text">All</span>
+        <div class="card-content white-text" style="font-size:12px">
+          <div class="col s4 "><a href="/static/TIMEWIZARD_MANUAL.pdf" target="_blank"><i class="material-icons">file_download</i></a>
+            <p>Prep</p>
+          </div>
+          <div class="col s4 "><a href="/static/TIMEWIZARD_MANUAL.pdf" target="_blank"><i class="material-icons">file_download</i></a>
+            <p>Stage</p>
+          </div>
+          <div class="col s4 "><a href="/static/TIMEWIZARD_MANUAL.pdf" target="_blank"><i class="material-icons">file_download</i></a>
+            <p>Impl</p>
+          </div>
+          </br>
+          </br>
+        </div>
+
+        <div class="card-action" style="font-size:12px">
+          <em><i class="material-icons tiny">phone</i> +46 555 43 24</em></br>
+          <em><i class="material-icons tiny">email</i> info@timewizard.se</em>
+        </div>
+
+
+
+      </div>
+    </div>
+
+
+    <!--..PDF Card 2............................................................-->
+    <!--..PDF Card 1............................................................-->
+    <div class="col s12 m4">
+      <div class="card blue-grey darken-4 center-align">
+        <span class="hide-on-med-and-up card-title white-text">Desktop</span>
+        <div class="card-content white-text" style="font-size:12px">
+          <div class="col s4 "><a href="/static/WireframePetramile3.pdf" target="_blank"><i class="material-icons">file_download</i></a>
+            <p>Start</p>
+          </div>
+          <div class="col s4 "><a href="/static/WireframePetramile3.pdf" target="_blank"><i class="material-icons">file_download</i></a>
+            <p>Org.</p>
+          </div>
+          <div class="col s4 "><a href="/static/WireframePetramile3.pdf" target="_blank"><i class="material-icons">file_download</i></a>
+            <p>Prod.</p>
+          </div>
+          </br>
+          </br>
+        </div>
+
+        <div class="card-content white-text" style="font-size:12px">
+          <div class="col s4 m6 l4"><a href="/static/TIMEWIZARD_MANUAL.pdf" target="_blank"><i class="material-icons">file_download</i></a>
+            <p>Users</p>
+          </div>
+          <div class="col s4 hide-on-med-only"><a href="/static/TIMEWIZARD_MANUAL.pdf" target="_blank"><i class="material-icons">file_download</i></a>
+            <p>Report</p>
+          </div>
+          <div class="col s4 m6 l4 "><a href="/static/TIMEWIZARD_MANUAL.pdf" target="_blank"><i class="material-icons">file_download</i></a>
+            <p>Set</p>
+          </div>
+          </br>
+          </br>
+        </div>
+
+        <div class="card-action" style="font-size:12px">
+          <em><i class="material-icons tiny">phone</i> +46 567 43 25</em></br>
+          <em><i class="material-icons tiny">email</i> desktop@timewizard.se</em>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!--..PDF Card 3............................................................-->
+
+    <div class="col s12 m4">
+      <div class="card blue-grey darken-4 center-align">
+        <span class="hide-on-med-and-up card-title white-text">  Web</span>
+        <div class="card-content white-text" style="font-size:12px">
+          <div class="col s6 "><a href="/static/WireframePetramile3.pdf" target="_blank"><i class="material-icons">file_download</i></a>
+            <p>Get started</p>
+          </div>
+          <div class="col s6 "><a href="/static/WireframePetramile3.pdf" target="_blank"><i class="material-icons">file_download</i></a>
+            <p>Wireframe</p>
+          </div>
+          </br>
+          </br>
+          </br>
+        </div>
+
+        <div class="card-action" style="font-size:12px">
+          <em><i class="material-icons tiny">phone</i> +46 756 43 27</em></br>
+          <em><i class="material-icons tiny">email</i> web@timewizard.se</em>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+{% endblock %}
