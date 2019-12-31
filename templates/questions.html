@@ -28,8 +28,10 @@
             <div class="collapsible-header row blue-grey darken-4">
               <div class="col s2">
                 <span>
-            {% if question.answer %}
+            {% if question.is_answered %}
             <i class="material-icons">sms</i>
+            {% elif question.answer %}
+            <i class="material-icons  grey-text">sms</i>
             {% else %}
             <i class="material-icons red-text">sms_failed</i>
             {% endif %}
