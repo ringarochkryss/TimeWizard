@@ -116,6 +116,13 @@ In the terminal write:
 echo web: python run.py > Procfile
 ```
 
+I ran into trouble with commiting the files. This trick solved that problem: 
+
+```bash
+sudo chown -R "${USER:-$(id -un)}" .
+```
+[Thanks to Stack Overflow and mr or mrs Code Worm](https://stackoverflow.com/questions/6448242/git-push-error-insufficient-permission-for-adding-an-object-to-repository-datab)
+
 ## Credits
 To develop this site obviously I was inspired by the software TW and the developers who just hired me to work on the web part of this programme.
 
