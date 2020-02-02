@@ -1,10 +1,11 @@
 # TIMEWIZARD
 ### A interactive user-guide 
+https://ringarochkryss.github.io/timewizard/ 
 
 <img src="/static/responsive mile3.png" height="350">
 
 This site displays a interactive FAQ for users of the imaginary software Timewizard.
- 
+
 
 ## UX
 
