@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="row">
-    <div class="col s12">
+    <div class="col s12 col s12 col l9 offset-l3">
         <h3>EDIT OR ANSWER</h3>
 
         {% for question in questions %}
@@ -38,30 +38,31 @@
                     <form action="{{ url_for('update_question', question_id=question._id) }}" method="POST" class="col s12">
 
 
+
+                        <!--Select -->
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select id="category" name="category_name">
+                                      <option value="" disabled selected>Select programme</option>
+                                        {% for category in categories %}
+                                         {% if category.category_name == question.category_name%}
+                                              <option value="{{category.category_name}}" selected >{{category.category_name}}</option>
+                                              {% else %}
+                                               <option value="{{category.category_name}}">{{category.category_name}}</option>
+                                            {% endif %}
+                                        {% endfor %}
+                                  </select>
+                                <label>Select Programme:</label>
+                            </div>
+                        </div>
+                        
+                        
                         <!-- User Name -->
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">person</i>
                                 <input id="Asked_by" name="Asked_by" type="text" class="validate" value="{{question.Asked_by}}">
                                 <label for="Asked_by">User Name</label>
-                            </div>
-                        </div>
-
-                        <!--Select -->
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <i class="material-icons prefix">poll</i>
-                                <select id="category" name="category_name">
-              <option value="" disabled selected>Select programme</option>
-                {% for category in categories %}
-                 {% if category.category_name == question.category_name%}
-                      <option value="{{category.category_name}}" selected >{{category.category_name}}</option>
-                      {% else %}
-                       <option value="{{category.category_name}}">{{category.category_name}}</option>
-                    {% endif %}
-                {% endfor %}
-          </select>
-                                <label>Select Programme:</label>
                             </div>
                         </div>
 

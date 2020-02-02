@@ -13,6 +13,10 @@ mongo = PyMongo(app)
 
 @app.route('/')
 
+@app.route('/view_questions')
+def view_questions():
+    return render_template("view_questions.html", questions=mongo.db.questions.find(),categories=mongo.db.categories.find())
+
 @app.route('/get_questions')
 def get_questions():
     return render_template("questions.html", questions=mongo.db.questions.find(),categories=mongo.db.categories.find())
@@ -20,10 +24,6 @@ def get_questions():
 @app.route('/insert_question')
 def ask():
     return render_template('ask.html', questions=mongo.db.questions.find(),categories=mongo.db.categories.find())
-    
-@app.route('/view_questions')
-def view_questions():
-    return render_template("view_questions.html", questions=mongo.db.questions.find(),categories=mongo.db.categories.find())
     
 @app.route('/manuals')
 def manuals():
